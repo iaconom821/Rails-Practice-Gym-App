@@ -1,0 +1,15 @@
+<%= form_for @gym do |f|%>
+    <%= f.label :gym_name%>
+    <%= f.text_field :name %>
+
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+
+    <%= f.submit %>
+    <br/>
+<% end %>
+
+
+<div>
+    <%= link_to "Gyms", gyms_path %> | <%= link_to "Clients", clients_path %> | <%= link_to "Register Membership", new_membership_path %> | <%= link_to "Add A Gym", new_gym_path %> | <%= link_to "Add A Client", new_client_path %>
+</div>

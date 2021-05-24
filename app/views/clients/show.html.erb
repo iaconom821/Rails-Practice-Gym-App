@@ -1,0 +1,18 @@
+<h1>Name: <%= @client.name %></h1>
+
+<h3>Age: <%= @client.age %></h3>
+
+<h3> Membership Costs: $<%= @client.total_price %></h3>
+
+<% @client.gyms.each do |gym| %>
+    <p><%= link_to gym.name, gym_path(gym) %></p>
+<% end %>
+
+<%= button_to "All Clients", clients_path, method: "get" %>
+
+<%= button_to "Delete Client", client_path(@client), method: "delete" %>
+
+
+<div>
+    <%= link_to "Gyms", gyms_path %> | <%= link_to "Clients", clients_path %> | <%= link_to "Register Membership", new_membership_path %> | <%= link_to "Add A Gym", new_gym_path %> | <%= link_to "Add A Client", new_client_path %>
+</div>

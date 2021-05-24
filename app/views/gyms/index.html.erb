@@ -1,0 +1,9 @@
+<h1>All Gyms</h1>
+
+<% @gyms.each do |gym| %>
+    <p><%= link_to gym.name, gym_path(gym) %>
+<% end %>
+
+<div>
+    <%= link_to "Gyms", gyms_path %> | <%= link_to "Clients", clients_path %> | <%= link_to "Register Membership", new_membership_path %> | <%= link_to "Add A Gym", new_gym_path %> | <%= link_to "Add A Client", new_client_path %>
+</div>

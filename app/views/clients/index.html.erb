@@ -1,0 +1,9 @@
+<h1>All Clients</h1>
+
+<% @clients.each do |client| %>
+    <p><%= link_to client.name, client_path(client) %>
+<% end %>
+
+<div>
+    <%= link_to "Gyms", gyms_path %> | <%= link_to "Clients", clients_path %> | <%= link_to "Register Membership", new_membership_path %> | <%= link_to "Add A Gym", new_gym_path %> | <%= link_to "Add A Client", new_client_path %>
+</div>
