@@ -26,7 +26,7 @@ class MembershipsController < ApplicationController
 
             redirect_to @membership
         else
-            flash[:my_errors] = @membership.errors
+            flash[:errors] = @membership.errors.full_messages
             
             redirect_to new_membership_path
         end

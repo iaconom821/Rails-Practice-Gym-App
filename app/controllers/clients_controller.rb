@@ -20,6 +20,7 @@ class ClientsController < ApplicationController
 
             redirect_to @client
         else
+            flash[:errors] = @client.errors.full_messages
             redirect_to new_client_path
         end
     end

@@ -5,7 +5,7 @@ class Client < ApplicationRecord
     validates :age, numericality: { greater_than: 12 }
 
     def total_price
-        if memberships.collect{|membership| membership.membership_charge}[0]
+        if memberships[0]
             memberships.sum{|membership| membership.membership_charge}
         else 
             0
